@@ -47,16 +47,17 @@ INTRO = """
 
 여러분께선 성간 무역 우주선의 선장입니다. 여러분은 여러 상품과 자원을 사고 팔며 우주 곳곳을 누비게 됩니다. 만약 여러분이 엄청난 기회를 잡아 훌륭한 거래를 성사시킨다면 상상 그 이상의 부를 누릴 겁니다.
 
-시간이 지날수록, 항성계는 천천히 변화할 것이고, 항성계의 무역 상황, 공급과 수요의 흐름 또한 변화할 것입니다. 예를 들어, 어떤 항성계의 우라늄과 금속 원자재 등 자원이 고갈되어 그들 값어치가 높게 상승한다든지, 새로운 기술이 개발되어 어떤 상품의 수요가 증가할 수도 있겠죠. 
+시간이 지날수록, 항성계는 천천히 변화할 것이고, 항성계의 무역 상황, 공급과 수요의 흐름 또한 변화할 것입니다. 예를 들어, 어떤 항성계의 우라늄과 강철 원자재 등 자원이 고갈되어 그들 값어치가 높게 상승한다든지, 새로운 기술이 개발되어 어떤 상품의 수요가 증가할 수도 있겠죠. 
 
-여러분의 선박은 일주일에 약 2광년을 여행할 수 있으며 최대 %s톤의 화물을 운반할 수 있습니다. 또한 항성계의 여러 곳엔 은행이 존재하는데, 은행은 I 클래스 및 II 클래스 항성계에만 존재합니다. 은행 시스템의 이자율은 5% 이며, 한 행성에 예금한 모든 돈은 은행이 존재하는 다른 행성에서 사용할 수 있게 됩니다."""
+여러분의 선박은 일주일에 약 2광년을 여행할 수 있으며 최대 %s톤의 화물을 운반할 수 있습니다. 또한 항성계의 여러 곳엔 은행이 존재하는데, 은행은 I 등급 및 II 등급 항성계에만 존재합니다. 은행 시스템의 이자율은 5%% 이며, 한 행성에 예금한 모든 돈은 은행이 존재하는 다른 행성에서 사용할 수 있게 됩니다.
+"""
 
 REPORT = """
-항성계 등급:
-     I  COSMOPOLITAN
-    II  DEVELOPED
-   III  UNDERDEVELOPED
-    IV  FRONTIER
+항성 등급:
+     I  거점 문명 항성
+    II  일반 항성
+   III  미개발 항성
+    IV  외딴 항성
 
 상품 타입:
     UR  우라늄
@@ -66,23 +67,22 @@ REPORT = """
   SOFT  소프트웨어
   GEMS  성광 보석
 
-     EACH TRADING SHIP CAN CARRY MAX %s TONS CARGO.
-STAR GEMS AND COMPUTER SOFTWARE, WHICH AREN'T SOLD BY THE
-TON, DON'T COUNT.
+화물 우주선은 최대 %s 톤의 화물을 운반할 수 있습니다.
+성광 보석과 소프트웨어는, 톤 단위로 거래할 수 없습니다.
 """
 
 ADVICE = """
-ALL SHIPS START AT SOL
-ADVICE;  VISIT THE CLASS III AND IV SYSTEMS -
-SOL AND THE CLASS II STARS PRODUCE ALOT OF HE,MED AND
-SOFT, WHICH THE POORER STAR SYSTEMS (CLASS III AND
-IV) NEED.  ALSO, THE POOR STARS PRODUCE THE RAW GOODS -
-UR,MET,GEMS THAT YOU CAN BRING BACK TO SOL AND
-THE CLASS II SYSTEMS IN TRADE
+\n모든 우주선은 소르에서 출발합니다.
 
-STUDY THE MAP AND CURRENT PRICE CHARTS CAREFULLY -
-CLASS I AND II STARS MAKE EXCELLENT TRADING PARTNERS
-WITH CLASS III OR IV STARS.
+팁 :  III 등급, IV 등급의 항성을 방문하세요.
+소르와 II 등급의 항성은 더 낮은 등급의 항성들을 위한 
+많은 양의 중장비와 의약품, 그리고 소프트웨어를 생산합니다.   
+또한, 낮은 등급의 항성에선 우라늄, 강철, 성광 보석 등의 
+원자재를 생산합니다. 원자재는 거래와 무역을 위해 소르를 
+비롯한 다른 II 등급의 항성으로 운반할 수 있습니다.
+또한, 항성계의 구조와 여러 자원, 상품의 시세를 항상 잘 알아두세요. 
+I 등급과 II 등급의 항성은 더 높은 등급의 항성과 훌륭한 거래 
+관계를 만들 수 있습니다.
 """
 
 COSMOPOLITAN = 15
@@ -91,16 +91,16 @@ UNDERDEVELOPED = 5
 FRONTIER = 0
 
 STAR_NAMES = [
-  "SOL", "YORK", "BOYD", "IVAN", "REEF", "HOOK", "STAN", "TASK", "SINK",
-  "SAND", "QUIN", "GAOL", "KIRK", "KRIS", "FATE"
+  "소르", "요르크", "보옛", "아이반", "리프", "후크", "스탄", "터스크", "싱크",
+  "샌드", "퀸", "갤", "퀴르크", "크라이스", "파테"
 ]
 
 MONTHS = [
-  "JAN", "FEB", "MAR", "APR", "MAY", "JUN", "JUL", "AUG", "SEP", "OCT",
-  "NOV", "DEC"
+  "1월", "2월", "3월", "4월", "5월", "6월", "7월", "8월", "9월", "10월",
+  "11월", "12월"
 ]
 
-GOODS_NAMES = ["UR", "MET", "HE", "MED", "SOFT", "GEMS"]
+GOODS_NAMES = ["<우라늄>", "<강철>", "<중장비>", "<의약품>", "<소프트웨어>", "<성광 보석>"]
 GOODS_TITLE = "%5s %5s %5s %5s %5s %5s" % tuple(GOODS_NAMES)
 
 PRICES = [5000, 3500, 4000, 4500, 3000, 3000]
@@ -179,26 +179,25 @@ def make_objects(g, obj, n):
   return [obj(g) for i in range(n)]
 
 def own_game(g):
-  g.number_of_players = ask("HOW MANY PLAYERS (2,3,4, ... ,12 CAN PLAY) ",
+  g.number_of_players = ask("플레이어 수(2, 3, 4, ..., 12 까지) : ",
     in_range(2, 12))
-  n = ask("HOW MANY SHIPS PER PLAYER (MAX 12) ",
+  n = ask("플레이어 당 소유할 화물 우주선의 수 (최대 12척) : ",
     lambda n: n > 0 and n * g.number_of_players <= 12)
   g.ships = make_objects(g, make_ship, n * g.number_of_players)
-  number_of_stars = ask("HOW MANY STAR SYSTEMS (FROM 4 TO 13 STARS) ",
+  number_of_stars = ask("총 항성의 수 (4, 5, 6, ...,  13 까지) : ",
     in_range(4, 13))
   g.stars = make_objects(g, make_star, number_of_stars)
-  length = ask("ENTER THE LENGTH OF GAME IN YEARS ", lambda n: n > 0)
+  length = ask("게임 진행 기간(년) : ", lambda n: n > 0)
   g.end_year = g.year + length
-  g.max_weight = ask("WHAT'S THE MAX CARGOE TONNAGE(USUALLY 30) ",
+  g.max_weight = ask("최대 화물 적재량(기본 30) : ",
     lambda n: n >= 25)
-  say("WHAT'S THE MINIMUM DISTANCE BETWEEN STARS")
-  g.max_distance = ask("(MIN SPACING 10, MAX 25, USUALLY 15) ",
+  say("항성 간 최소 거리")
+  g.max_distance = ask("(최소 10, 최대 25, 기본 15) : ",
     in_range(10, 25))
-  g.number_of_rounds = ask("HOW MANY BIDS OR OFFERS(USUALLY 3) ",
+  g.number_of_rounds = ask("입찰 또는 제안 수(기본 3) : ",
     lambda n: n > 0)
-  say("SET THE PROFIT MARGIN(1,2,3,4 OR 5)...THE HIGHER\n")
-  say("THE NUMBER, THE LOWER THE PROFIT % ... USUALLY SET TO 2\n")
-  g.margin = ask("...YOUR NUMBER ", in_range(1, 5)) * 18
+  say("이윤 폭(1 ~ 5)...")
+  g.margin = ask(": ", in_range(1, 5)) * 18
 
 def distance(x1, y1, x2, y2):
   return math.sqrt((x2 - x1) ** 2 + (y2 - y1) ** 2)
@@ -271,11 +270,11 @@ def make_stars(g):
 
 def name_ships(g):
   ship_index = 0
-  say("\nCAPTAINS, NAME YOUR SHIPS\n")
+  say("\n선장님, 화물 우주선의 이름을 지어주실 차례입니다!\n")
   for i in range(len(g.ships) // g.number_of_players):
     for p in range(g.number_of_players):
-      say("   CAPTAIN %d WHAT DO YOU CHRISTEN YOUR SHIP # %s\n" % (
-        p + 1, i + 1))
+      say("  이름을 정해주십시오(플레이어 %s) : " % (
+        i + 1))
       g.ships[ship_index].name = get_text()
       g.ships[ship_index].player_index = p
       ship_index += 1
@@ -287,17 +286,17 @@ def finish_setup(g):
   g.accounts = make_objects(g, make_account, g.number_of_players)
 
 def setup(g):
-  say("INSTRUCTIONS (TYPE 'Y' OR 'N' PLEASE) ")
+  say("Star Traders 배경 알아보기 ('Y' 또는 'N' 입력) : ")
   if get_text() == "Y":
     say("%s\n" % (INTRO % g.max_weight))
-  say("HAVE ALL PLAYERS PLAYED BEFORE ")
+  say("전에 플레이해 본 적이 있나요? ('Y' 또는 'N' 입력) :  ")
   if get_text() == "Y":
-    say("DO YOU WANT TO SET UP YOUR OWN GAME ")
+    say("커스텀 설정으로 게임을 플레이하실 겁니까? ('Y' 또는 'N' 입력) : ")
     if get_text() == "Y":
       own_game(g)
       finish_setup(g)
       return
-  g.number_of_players = ask("HOW MANY PLAYERS (2,3, OR 4 CAN PLAY) ",
+  g.number_of_players = ask("총 플레이어 수 (2 ~ 4) : ",
     in_range(2, 4))
   g.ships = make_objects(g, make_ship, 2 * g.number_of_players)
   g.stars = make_objects(g, make_star, 3 * g.number_of_players + 1)
@@ -305,12 +304,12 @@ def setup(g):
   finish_setup(g)
 
 def star_map(g):
-  say("                      STAR MAP\n")
-  say("                    ************\n")
+  say("                    항성계 구조\n")
+  say("                   *************\n")
   for y in range(15, -16, -1):
     line = list("                         1                             ")
     if y == 0:
-      line = list("1----1----1----1----1----*SOL-1----1----1----1----1    ")
+      line = list("1----1----1----1----1----*소르-1----1----1----1----1    ")
     elif y % 3 == 0:
       line[25] = "-"
     y_hi = y * 10 / 3
@@ -321,11 +320,11 @@ def star_map(g):
         name = g.stars[s].name
         line[x:x + len(name) + 1] = "*" + name
     say("%s\n" % "".join(line))
-  say("\nTHE MAP IS 100 LIGHT-YEARS BY 100 LIGHT-YEARS,\n")
-  say("SO THE CROSS-LINES MARK 10 LIGHT-YEAR DISTANCES\n")
+  say("\n보이는 이 지도는 가로 세로 100광년이며,\n")
+  say("'-' 표시는 10광년을 의미합니다. (지도 상 '1' 또는 '-' 비틀림은 \n항성 배치의 무작위성으로 인해 발생되는 현상이니 \n무시하셔도 됩니다.)\n\n")
 
 def ga():
-  say("\n                    *** GENERAL ANNOUNCEMENT ***\n\n")
+  say("\n                *** 상태 정보 보고 ***\n\n")
 
 # M AND C DETERMINE A STAR'S PRODUCTIVITY/MONTH
 #   PROD/MO. = S(7,J) * M(I,R1)  +  C(I,R1)
@@ -377,18 +376,18 @@ def price_col(n):
 
 def report(g):
   ga()
-  say("JAN  1, %d%s YEARLY REPORT # %d\n" % (
+  say("1월 1일, %d%s 연간 보고 # %d\n" % (
     g.year, " " * 35, g.year - 2069))
   if g.year <= 2070:
     say("%s\n" % (REPORT % g.max_weight))
-  say("%sCURRENT PRICES\n\n" % (" " * 20))
-  say("NAME  CLASS %s\n" % GOODS_TITLE)
+  say("%s[ 시세 표] \n... 여러 문자열의 길이 변동과 CLI의 한계로 표가 지저분할 수 있음!\n\n" % (" " * 20))
+  say(" [항성]  [등급]  %s\n" % GOODS_TITLE)
   for i in range(len(g.stars)):
     update_prices(g, g.stars[i])
     prices = g.stars[i].prices
     for j in range(6):
       prices[j] = sgn(g.stars[i].goods[j]) * prices[j]
-    say("%4s %5s  %5s %5s %5s %5s %5s %5s\n" % (
+    say("%4s  %5s      %5s   %5s   %5s   %5s      %5s         %5s\n" % (
       g.stars[i].name,
       text_level(g, g.stars[i]),
       price_col(prices[0]),
@@ -400,9 +399,9 @@ def report(g):
     ))
     if i % 2 != 0:
       say("\n")
-  say("\n('+' MEANS SELLING AND '-' MEANS BUYING)\n")
-  say("\n%sCAPTAINS\n\n" % (" " * 22))
-  say("NUMBER  $ ON SHIPS   $ IN BANK     CARGOES      TOTALS\n")
+  say("\n('+' 는 공급, '-' 는 수요)\n")
+  say("\n%s[ 선장 정보 ]\n\n" % (" " * 22))
+  say("[플레이어 번호]  [화물 우주선 잔고]   [은행 잔고]     [적재량]      [총 합]\n")
   for account in g.accounts:
     update_account(g, account)
   for p in range(g.number_of_players):
@@ -416,7 +415,7 @@ def report(g):
           cargoes += ship.goods[j] * PRICES[j]
     in_bank = rint(g.accounts[p].sum)
     totals = on_ships + cargoes + in_bank
-    say("  %2d    %10d  %10d  %10d  %10d\n" % (
+    say("      %2d           %10d     %10d       %10d    %10d\n" % (
       p + 1, on_ships, in_bank, cargoes, totals
     ))
 
@@ -435,11 +434,11 @@ def travel(g, from_star):
   if rnd() <= g.ship_delay / 2:
     w = 1 + rint(rnd() * 3)
     if w == 1:
-      say("LOCAL HOLIDAY SOON\n")
+      say("곧 휴일이 다가옵니다!\n")
     elif w == 2:
-      say("CREWMEN DEMAND A VACATION\n")
+      say("선원들이 휴가를 원하네요?\n")
     elif w == 3:
-      say("SHIP DOES NOT PASS INSPECTION\n")
+      say("선장님! 화물 우주선 점검 결과가 좋지 못하다고 합니다.\n")
     say(" - %d WEEK DELAY.\n" % w)
     d += 7 * w
   ship_days(g, d)
@@ -461,14 +460,14 @@ def next_eta(g):
    elif ans == "REPORT":
      report(g)
    elif ans == g.ship.star.name:
-     say("CHOOSE A DIFFERENT STAR SYSTEM TO VISIT")
+     say("현재 정박중인 항성 말고, 어떤 항성에 가가실 건가요?")
    elif ans in targets:
      from_star = g.ship.star
      g.ship.star = g.stars[get_names(g.stars).index(ans)]
      travel(g, from_star)
      break
    else:
-     say("%s IS NOT A STAR NAME IN THIS GAME" % ans)
+     say("%s 항성계엔 그런 항성이 없습니다만..." % ans)
    say("\n")
 
 def landing(g):

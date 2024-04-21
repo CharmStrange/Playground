@@ -1,5 +1,6 @@
 # Star Trader by Dave Kaufman, 1974
 # Python version by Peter Sovietov, 2017
+# Korean Translation version by CharmStrange, 2024
 
 from __future__ import division
 import sys
@@ -42,43 +43,28 @@ def sgn(x):
 rint = lambda x: int(round(x))
 
 INTRO = """
-     THE DATE IS JAN 1, 2070 AND INTERSTELLAR FLIGHT
-HAS EXISTED FOR 70 YEARS.  THERE ARE SEVERAL STAR
-SYSTEMS THAT HAVE BEEN COLONIZED.  SOME ARE ONLY
-FRONTIER SYSTEMS, OTHERS ARE OLDER AND MORE DEVELOPED.
+현재는 2070년 1월 1일, 인류는 70년 간 성간 비행을 진행중입니다. 우주 곳곳에는 식민지화된 여러 행성이 있고, 그들 중 일부는 강력한 문명이 존속중이며 다른 일부는 굉장히 오래되어 황폐하거나, 또는 굉장히 발전된 상태입니다.
 
-     EACH OF YOU IS THE CAPTAIN OF TWO INTERSTELLAR
-TRADING SHIPS.  YOU WILL TRAVEL FROM STAR SYSTEM TO
-STAR SYSTEM, BUYING AND SELLING MERCHANDISE.  IF YOU
-DRIVE A GOOD BARGAIN YOU CAN MAKE LARGE PROFITS.
+여러분께선 성간 무역 우주선의 선장입니다. 여러분은 여러 상품과 자원을 사고 팔며 우주 곳곳을 누비게 됩니다. 만약 여러분이 엄청난 기회를 잡아 훌륭한 거래를 성사시킨다면 상상 그 이상의 부를 누릴 겁니다.
 
-     AS TIME GOES ON, EACH STAR SYSTEM WILL SLOWLY
-GROW, AND ITS NEEDS WILL CHANGE.  A STAR SYSTEM THAT
-HOW IS SELLING MUCH URANIUM AND RAW METALS CHEAPLY
-MAY NOT HAVE ENOUGH FOR EXPORT IN A FEW YEARS.
+시간이 지날수록, 항성계는 천천히 변화할 것이고, 항성계의 무역 상황, 공급과 수요의 흐름 또한 변화할 것입니다. 예를 들어, 어떤 항성계의 우라늄과 금속 원자재 등 자원이 고갈되어 그들 값어치가 높게 상승한다든지, 새로운 기술이 개발되어 어떤 상품의 수요가 증가할 수도 있겠죠. 
 
-     YOUR SHIPS CAN TRAVEL ABOUT TWO LIGHTYEARS IN A
-WEEK AND CAN CARRY UP TO %s TONS OF CARGO.  ONLY
-CLASS I AND CLASS II STAR SYSTEMS HAVE BANKS ON THEM.
-THEY PAY 5%% INTEREST AND ANY MONEY YOU DEPOSIT ON ONE
-PLANET IS AVAILABLE ON ANOTHER - PROVIDED THERE'S A LOCAL
-BANK.
-"""
+여러분의 선박은 일주일에 약 2광년을 여행할 수 있으며 최대 %s톤의 화물을 운반할 수 있습니다. 또한 항성계의 여러 곳엔 은행이 존재하는데, 은행은 I 클래스 및 II 클래스 항성계에만 존재합니다. 은행 시스템의 이자율은 5% 이며, 한 행성에 예금한 모든 돈은 은행이 존재하는 다른 행성에서 사용할 수 있게 됩니다."""
 
 REPORT = """
-STAR SYSTEM CLASSES:
+항성계 등급:
      I  COSMOPOLITAN
     II  DEVELOPED
    III  UNDERDEVELOPED
     IV  FRONTIER
 
-MERCHANDISE:
-    UR  URANIUM
-   MET  METALS
-    HE  HEAVY EQUIPMENT
-   MED  MEDICINE
-  SOFT  COMPUTER SOFTWARE
-  GEMS  STAR GEMS
+상품 타입:
+    UR  우라늄
+   MET  강철
+    HE  중장비
+   MED  의약품
+  SOFT  소프트웨어
+  GEMS  성광 보석
 
      EACH TRADING SHIP CAN CARRY MAX %s TONS CARGO.
 STAR GEMS AND COMPUTER SOFTWARE, WHICH AREN'T SOLD BY THE

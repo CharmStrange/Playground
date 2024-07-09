@@ -125,11 +125,13 @@
 ## W6 : 앙상블 모델
 > ***Ensemble*** : 전체적인 어울림이나 통일. ‘조화’로 순화한다는 의미의 프랑스어
 > 
-> ![alt text](image.png)
+> ![image](https://github.com/CharmStrange/Playground/assets/105769152/fa69b58b-fc7a-465c-add9-9c7b3954d938)
+
 > 
 > 이름에서도 알 수 있듯, 여러 분류 모델을 섞어 그 결과에 있어 최선의 성능을 발휘할 수 있게 하는 새로운 모델이다. `Meta-Classfier` 라고도 불리며, 직관적으로 이해가 가능한 동시에 결과에 대한 성능이 단적 분류 모델에 비해 뛰어난 편이라 머신 러닝 세계에서 매우 자주 활용된다.
 >
-> ![alt text](image-1.png)
+> ![image](https://github.com/CharmStrange/Playground/assets/105769152/060bcf83-1129-47eb-a8b7-ef339c184e38)
+
 >
 > ### 대표적인 앙상블 모델(기법) 
 > - **Averaging**

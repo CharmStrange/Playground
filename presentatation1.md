@@ -40,7 +40,7 @@
 > 
 > ![image](https://github.com/CharmStrange/Playground/assets/105769152/c467ba40-3eab-4a1c-b91e-591686c23f6b)
 >
-> 이 그림에서의 Decision Tree는 가장 쉬운 `예-아니오` 이진 분류 형태이고, 최종 결과(목적지)를 **Label** 이라고 부른다.
+> 이 그림에서의 **Decision Tree**는 가장 쉬운 `예-아니오` 이진 분류 형태이고, 최종 결과(목적지)를 **Label** 이라고 부른다.
 >
 > **Label** 에 대해서 집중적으로 예측을 진행하는 것이 머신 러닝의 **지도 학습** 기법이고, 이 기법은 사용자가 모델에 *fature* value 와 그에 대한 **Label** 을 제공하는 방식으로 진행된다. 그럼 모델은 주어진 **Label** 과 그에 대응하는 *faeture* value 들의 특징을 자동으로 찾아내 학습을 하는 것이다.
 > 
@@ -52,4 +52,18 @@
 > 
 
 ## W3 : 지도 학습의 일반화 성능
-> 보통 방대한 데이터가 주어졌을 때, Decision Tree는 수많은 **Record** 에 대해 
+> 보통 방대한 데이터가 주어졌을 때, **Decision Tree**는 수많은 **Record** 에 대해 Decision을 하는 Tree 진행 알고리즘을 수행한다. 이를 **Decision Tree** *split* 이라 부르고, 이것이 어떻게 구성되느냐에 따라 **Decision Tree**의 성능이 결정된다. 
+>
+> 여기서 성능이라는 것은, 기존의 방대한 데이터에 포함되지 않은, 새로운 *feature* value 의 **Record** 가 모델에 주어졌을 때, 지도 학습을 바탕으로 습득한 데이터의 패턴에 따라 **Label** 을 얼마나 잘 예측하느냐의 척도이다.
+>
+> ### 일반화 개요
+> 모델의 성능을 향상시키려면, 즉 새로운 데이터에도 강한 예측력을 보여주는 모델을 만들기 위해선 데이터 학습 단계에서 모델이 데이터의 특징을 일반화할 수 있게 잘 조정해야 한다. 데이터의 특징을 일반화하지 못하고 패턴을 학습한다면 **Overfitting** 또는 **Underfitting** 이라는 문제가 발생한다.
+>
+> > #### Overfitting
+> 학습에 사용된 데이터에 한해서만 **Label** 예측이 정확한, 데이터의 모든 특징을 너무 과도하게 학습하여 발생하는 문제이다.
+>
+> > #### Underfitting
+> 학습에 사용된 데이터의 **Label** 도 제대로 예측하지 못하는, 데이터의 특징을 너무 대충, 적게 학습하여 발생하는 문제이다.
+>
+> #### Overfitting & Underfitting 검증 방법
+> ![image](https://github.com/CharmStrange/Playground/assets/105769152/7e2c893b-881b-42f4-afea-d5620a6e5116)

@@ -60,3 +60,20 @@
 > > 예측 값과 실제 값의 부호가 다르면 $\max (0, +)=+$ 이고,
 > > 부호가 다르면 $\max (0, -)=0$ 이라 이렇게 부호가 다른 경우에 한해 파라미터의 최적화가 가능하다.
 > >
+> > 하지만 **Max function** 또한 실제 값과 예측 값 중 하나라도 0이 나오면 $\max (0, 0)=0$ 이기 때문에 의미있는 추정이었다고 하더라도 그것이 무시가 된다. 이것이 **degenerate solution** 이라는 문제이다.
+> 
+> > ### Hinge loss function
+> > **degenerate solution** 을 해결한, **Max function** 이 개선된 형태의 목적 함수이다.
+> >
+> > $\max (0, 1-(\hat{y}\times y))$ : *margin* 이라고 하는 1 항 하나가 추가된 별 거 없어보이는 형태이지만, 이 *margin* 을 추가함으로써 **degenerate solution** 문제가 해결된다.
+> >
+> > **Hinge loss function** 은 **0-1 loss function** 의 *upper bound* : 그 출력이 항상 크거나 같은 포지션이다. **0-1 loss function** 의 출력이 9.8 이면 오차가 발생한 데이터의 개수가 9개라는 것인데, 여기서 **0-1 loss function** 을 **Hinge loss function** 로 그대로 바꿔 넣어도 그 출력은 최소 9.8 이라는 것이다.
+> 
+> > ### Logistic loss function
+> > **0-1 loss function** 의 기본 형태에, `Log - Sum - Exponential` 을 적용해 새로운 형태로 만든 목적 함수이다.
+> >
+> > $\sum_{i=1}^{n} log(1 + \exp(-(\hat{y}\times y)))$ : 아주 작은 차이를 가진 두 변수에 `Exponential` 을 적용한 결과를 서로 비교해 보면, 그 차이가 매우 커진다. 또한 **Logistic loss function** 의 출력은 모든 지점에서 미분이 가능하기 때문에 목적 함수로서의 가치가 있다.
+> >
+> > 여기서 발전된 **Sigmoid function** 을 사용해 선형 회귀 모델의 확률적 구분기를 만들 수 있다.
+
+## W9 : 

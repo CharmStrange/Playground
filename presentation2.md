@@ -137,9 +137,16 @@
 > > ### Convolutions
 > > 비선형 데이터의 대표 격인 이미지 데이터를 적절히 변형하는 기술로, 이미지의 각 픽셀의 집합인 복셀을 주로 다루며 변환을 진행한다.
 > >
-> > - **1-D Convolution** : *Identity filter*, *Translation filiter*, *Local average filter*, *First derivation filter*, *Laplacian filter*, ...
-> > - **2-D Convolution** : 
-> > - **3-D Convolution**
+> > **Convolutions** : `Identity filter`, `Translation filiter`, `Local average filter`, `First derivation filter`, `Laplacian filter`, `Gaussian filter`, `Laplacian of Gaussian filter`, `Gabor filter`...
+> >  
+> > ***Boundary issue*** : 이미지 데이터에 **Convolution** 을 적용할 때 발생할 수 있는 문제로, 픽셀이 없거나 잘린 경우 그 경계에서 발생한다. 
+> >
+> > ***Boundary issue*** 해결을 위해 `zero padding : 없는 픽셀에 0을 할당`, `replicate : 좌측 끝의 픽셀 값을 할당`, `mirror : 새로운 픽셀 값의 정 반대 값을 할당` 등의 방법을 사용하게 된다.
+> 
+> > ### Kernel Trick
+> > 1차 직선으로 표현 불가능한 특징을 가진 *feature* values 를 1차 직선에 맞게 변환하거나, 다른 곡선 형태의 모델을 사용해 표현하려고 할 때 *feature* value 의 복잡도는 많이 올라가게 된다. 예를 들어 곡선 형태의 모델을 사용하려면 그에 맞는 2차 이상의 *feature* value 를 추가해야 하는데 그들을 추가한다면 그에 대응하는 파라미터 또한 추가되어 추후 머신 러닝에서의 모든 연산 과정이 복잡해진다. **Kernel Trick** 은 선형대수적 수식 정리, 전개, 변환 등을 통해 모델의 결과까지의 과정을 간소화하는 기법이다. 간소화한다고 해서 모델의 결과에 좋지 않은 영향을 주진 않는다.
+> >
+> > 대표적인 **Kernel Trick** 으로는 `Linear`, `Polynomial`, `Gaussian-RBF` 이 있다.
 
 ## W12 : 비지도 학습
 >데이터셋의 *feature* value 를 제공함과 동시에 `Label` 을 제공하는 지도 학습과는 다르게, 비지도 학습은 오직 데이터셋의 *feature* value 만을 제공하고 그들의 패턴을 컴퓨터가 직접 학습하게 한다.

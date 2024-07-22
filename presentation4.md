@@ -22,3 +22,8 @@
 > - `Convolution Layer` : 여러 **Convolution filter** 를 사용해 입력받은 데이터의 변환을 수행한다.
 > - `Fully Connect Layer` : `Convolution Layer` 에서 얻은 여러 결과를 바탕으로 새로운 결과를 출력한다.
 > - `Activation Function` : 입력받은 데이터들의 비선형성을 선형성을 가지도록 변환해 주는 역할을 한다. *Network* 의 제일 마지막 `Layer` 에 위치한다.
+
+## Gradient Vanishing
+> **Deep Neural Network** 의 `Layer` 층이 많아질수록, 즉 **Deep Neural Network** 의 깊이가 깊어질수록 잘 발생하는 문제이다. 
+>
+> 각 `Layer` 의 출력은 안정화된 값과 분포를 따르도록 설정되는데, 이 안정적 출력은 *Gaussian Distribution* 을 따른다. 이 때문에 각 출력이 $0$ 근처 값을 가질 것이고, 이 때문에 각 파라미터 또한 $0$ 에 근접한 값을 가진다. 이러한 파라미터의 연쇄로 말미암아 연산되는 전체 **Gradient** 는 0에 가까워 져 **Deep Neural Network** 의 학습을 원활히 진행할 수 없게 된다.

@@ -34,3 +34,15 @@
 > >
 > > **Mini-bacth Gradient Descent** 는 일반 경사 하강법과 **Stochastic Gradient Descent** 중간에 위치한 방법이다.
 > > ![image](https://github.com/user-attachments/assets/e6b4f99c-9c10-4bff-95a1-bb76ebebd0e8)
+> >
+> > #### Implicit SGD
+> >
+> > #### Momentum
+> >
+> > #### Averaging
+> >
+> > #### AdaGrad
+> >
+> > #### RMSProp
+> >
+> > #### Adam

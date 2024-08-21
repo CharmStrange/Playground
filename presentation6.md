@@ -71,8 +71,8 @@
 >
 > > ### 신뢰 구간
 > > 모집단의 특정 모수가 포함될 것으로 예상되는 범위를 말한다. 모델의 예측 결과에 대한 불확실성을 정량화하여 결과의 신뢰성을 평가할 수 있다.
->
-> ![image](https://github.com/user-attachments/assets/09cae0f5-20de-402f-b778-6b54eb8500ff)
+> >
+> > ![image](https://github.com/user-attachments/assets/09cae0f5-20de-402f-b778-6b54eb8500ff)
 > 
 > > ### 혼동 행렬
 > > - **정의**: 분류 모델의 성능을 평가하기 위해 실제 값과 예측 값을 교차하여 나타낸 행렬이다.

@@ -77,7 +77,12 @@
 > >   - **FP(거짓 긍정)**: 실제로 부정인 데이터를 긍정으로 예측.
 > >   - **TN(참 부정)**: 실제로 부정인 데이터를 부정으로 예측.
 > >   - **FN(거짓 부정)**: 실제로 긍정인 데이터를 부정으로 예측.
+> >  
+> >   ![image](https://github.com/user-attachments/assets/f92749f2-3bff-486f-ac3b-949ee19a910b)
 > 
 > > ### ROC & AUC
 > > - **ROC(Receiver Operating Characteristic) 곡선**: 분류기의 민감도(True Positive Rate)와 특이도(False Positive Rate) 간의 관계를 나타내는 곡선이다.
 > > - **AUC(Area Under Curve)**: ROC 곡선 아래의 면적으로, 모델의 전반적인 성능을 평가하는 지표이다.
+> >
+> > ![image](https://github.com/user-attachments/assets/3f3b585d-cd0d-4324-86f7-fe18aacd6bc9)
+

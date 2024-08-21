@@ -80,54 +80,54 @@
 > >
 > >![Logistic Regression Graph](https://github.com/user-attachments/assets/5eeadc78-b35b-4cc7-9619-f86fc6d7f32c)
 
----
-
-# 모델 평가
-
-## 신뢰 구간(Confidence Interval)
-
-신뢰 구간은 **모집단의 특정 모수**(예: 평균)가 포함될 것으로 예상되는 범위를 나타냅니다. 이는 모델 예측의 불확실성을 정량화하며, 결과의 **신뢰성**을 평가할 수 있습니다.
-
-- **예시**: "이 모델은 95% 신뢰 수준에서, 예측된 확률이 실제 확률과 ±5% 이내에 있을 것이다."
-- **해석**: 신뢰 구간이 좁을수록 모델의 예측이 더 정확하다는 것을 의미합니다.
-
-![Confidence Interval](https://github.com/user-attachments/assets/09cae0f5-20de-402f-b778-6b54eb8500ff)
-
-## 혼동 행렬(Confusion Matrix)
-
-혼동 행렬은 **분류 모델의 성능**을 평가하는 데 사용되는 도구로, 모델이 예측한 값과 실제 값을 비교하여 성능을 정량화합니다.
-
-### 구성 요소
-- **TP(참 긍정, True Positive)**: 실제로 긍정인 데이터를 모델이 긍정으로 예측한 경우.
-- **FP(거짓 긍정, False Positive)**: 실제로 부정인 데이터를 모델이 긍정으로 예측한 경우.
-- **TN(참 부정, True Negative)**: 실제로 부정인 데이터를 모델이 부정으로 예측한 경우.
-- **FN(거짓 부정, False Negative)**: 실제로 긍정인 데이터를 모델이 부정으로 예측한 경우.
-
-### 예시
-- **암 진단 모델**:
-  - TP: 실제로 암이 있는 환자를 암이 있다고 예측
-  - FP: 실제로 암이 없는 환자를 암이 있다고 예측
-  - TN: 실제로 암이 없는 환자를 암이 없다고 예측
-  - FN: 실제로 암이 있는 환자를 암이 없다고 예측
-
-![Confusion Matrix](https://github.com/user-attachments/assets/f92749f2-3bff-486f-ac3b-949ee19a910b)
-
-## ROC & AUC
-
-### ROC(Receiver Operating Characteristic) 곡선
-ROC 곡선은 분류기의 **민감도(True Positive Rate, TPR)**와 **특이도(False Positive Rate, FPR)** 간의 관계를 나타내는 곡선입니다.
-
-- **민감도 (TPR)**: 실제로 긍정인 데이터를 긍정으로 예측한 비율
-- **특이도 (FPR)**: 실제로 부정인 데이터를 긍정으로 잘못 예측한 비율
-
-### AUC(Area Under the Curve)
-AUC는 **ROC 곡선 아래의 면적**을 의미하며, 모델의 전반적인 성능을 평가하는 지표로 사용됩니다. AUC 값이 1에 가까울수록 모델의 성능이 우수함을 나타냅니다.
-
-- **해석**:
-  - AUC = 0.5: 모델이 무작위로 예측하는 수준
-  - AUC > 0.7: 꽤 좋은 모델
-  - AUC > 0.9: 매우 우수한 모델
-
-![ROC and AUC](https://github.com/user-attachments/assets/3f3b585d-cd0d-4324-86f7-fe18aacd6bc9)
+> ## 평가
+> 
+> > ### 신뢰 구간(Confidence Interval)
+> >
+> > 신뢰 구간은 **모집단의 특정 모수**(예: 평균)가 포함될 것으로 예상되는 범위를 나타낸다. 이는 모델 예측의 불확실성을 정량화하며, 결과의 **신뢰성**을 평가할 수 있는 지표이다.
+> >
+> > ```이 모델은 95% 신뢰 수준에서, 예측된 확률이 실제 확률과 ±5% 이내에 있을 것이다.```
+> > 
+> > : 신뢰 구간이 좁을수록 모델의 예측이 더 정확하다는 것을 의미한다.
+> >
+> > ![Confidence Interval](https://github.com/user-attachments/assets/09cae0f5-20de-402f-b778-6b54eb8500ff)
+>
+> > ### 혼동 행렬(Confusion Matrix)
+> >
+> > 혼동 행렬은 **분류 모델의 성능**을 평가하는 데 사용되는 도구로, 모델이 예측한 값과 실제 값을 비교하여 성능을 정량화한다.
+> >
+> > **구성 요소**
+> > - **TP(참 긍정, True Positive)**: 실제로 긍정인 데이터를 모델이 긍정으로 예측한 경우.
+> > - **FP(거짓 긍정, False Positive)**: 실제로 부정인 데이터를 모델이 긍정으로 예측한 경우.
+> > - **TN(참 부정, True Negative)**: 실제로 부정인 데이터를 모델이 부정으로 예측한 경우.
+> > - **FN(거짓 부정, False Negative)**: 실제로 긍정인 데이터를 모델이 부정으로 예측한 경우.
+> >
+> > 예 :
+> > - **암 진단 모델**:
+> >   - TP: 실제로 암이 있는 환자를 암이 있다고 예측!
+> >   - FP: 실제로 암이 없는 환자를 암이 있다고 예측!
+> >   - TN: 실제로 암이 없는 환자를 암이 없다고 예측!
+> >   - FN: 실제로 암이 있는 환자를 암이 없다고 예측!
+> >
+> > ![Confusion Matrix](https://github.com/user-attachments/assets/f92749f2-3bff-486f-ac3b-949ee19a910b)
+>
+> > ### ROC & AUC
+> >
+> > > **ROC(Receiver Operating Characteristic) 곡선**
+> > >
+> > > **ROC 곡선**은 분류기의 **민감도(True Positive Rate, TPR)** 와 **특이도(False Positive Rate, FPR)** 간의 관계를 나타내는 곡선이다.
+> > >
+> > > - **민감도 (TPR)** : 실제로 긍정인 데이터를 긍정으로 예측한 비율.
+> > > - **특이도 (FPR)** : 실제로 부정인 데이터를 긍정으로 잘못 예측한 비율.
+> >
+> > > **AUC(Area Under the Curve)**
+> > >
+> > > **AUC**는 **ROC 곡선 아래의 면적**을 의미하며, 모델의 전반적인 성능을 평가하는 지표로 사용된다. **AUC** 값이 $1$에 가까울수록 모델의 성능이 우수함을 의미한다.
+> > >
+> > >   - **AUC** $=$ $0.5$ : 모델이 무작위로 예측하는 수준
+> > >   - **AUC** $>$ $0.7$ : 꽤 좋은 모델
+> > >   - **AUC** $>$ $0.9$ : 매우 우수한 모델
+> >
+> > ![ROC and AUC](https://github.com/user-attachments/assets/3f3b585d-cd0d-4324-86f7-fe18aacd6bc9)
 
 
